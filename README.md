@@ -105,7 +105,7 @@ docker-compose up --build
 - Grafana: http://localhost:3000 (default login: `admin` / `admin`)
 
 ### 3. Sample Prometheus Queries
-```prometheus
+```
 jobs_created_total
 inspections_logged_total
 inventory_updates_total
@@ -114,14 +114,14 @@ inventory_updates_total
 ## Sample Payloads
 
 ### Create Job
-```json
+```
 {
   "job_name": "Test Job"
 }
 ```
 
 ### Log Inspection
-```json
+```
 {
   "job_id": 1,
   "result": "Pass",
@@ -130,7 +130,7 @@ inventory_updates_total
 ```
 
 ### Update Inventory
-```json
+```
 {
   "item_name": "Raw Material A",
   "quantity": 50
