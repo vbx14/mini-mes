@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>MES API Tester</title>
+</head>
+<body>
+  <h1>MES Testing UI</h1>
+
+  <h3>Create Job</h3>
+  <input type="text" id="jobName" placeholder="Enter job name" />
+  <button onclick="createJob()">Create</button>
+  <pre id="jobResult"></pre>
+
+  <h3>Log Inspection</h3>
+  <input type="number" id="inspJobId" placeholder="Job ID" />
+  <input type="text" id="result" placeholder="Pass/Fail" />
+  <input type="text" id="notes" placeholder="Notes" />
+  <button onclick="logInspection()">Log</button>
+  <pre id="inspResult"></pre>
+
+  <h3>Update Inventory</h3>
+  <input type="text" id="itemName" placeholder="Item name" />
+  <input type="number" id="quantity" placeholder="Quantity" />
+  <button onclick="updateInventory()">Update</button>
+  <pre id="invResult"></pre>
+
+  <script>
+    async function createJob() {
+      const jobName = document.getElementById('jobName').value;
+      const res = await fetch('/production/create', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ job_name: jobName })
+      });
+      document.getElementById('jobResult').innerText = await res.text();
+    }
+
+    async function logInspection() {
+      const job_id = parseInt(document.getElementById('inspJobId').value);
+      const result = document.getElementById('result').value;
+      const notes = document.getElementById('notes').value;
+      const res = await fetch('/quality/log', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ job_id, result, notes })
+      });
+      document.getElementById('inspResult').innerText = await res.text();
+    }
+
+    async function updateInventory() {
+      const item_name = document.getElementById('itemName').value;
+      const quantity = parseInt(document.getElementById('quantity').value);
+      const res = await fetch('/warehouse/update', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ item_name, quantity })
+      });
+      document.getElementById('invResult').innerText = await res.text();
+    }
+  </script>
+</body>
+</html>

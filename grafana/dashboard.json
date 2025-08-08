@@ -1,0 +1,22 @@
+{
+  "dashboard": {
+    "title": "Mini MES Dashboard",
+    "panels": [
+      {
+        "type": "graph",
+        "title": "Jobs Created",
+        "targets": [{"expr": "jobs_created", "format": "time_series"}]
+      },
+      {
+        "type": "graph",
+        "title": "Inspections Logged",
+        "targets": [{"expr": "inspections_logged", "format": "time_series"}]
+      },
+      {
+        "type": "graph",
+        "title": "Inventory Updates",
+        "targets": [{"expr": "inventory_updates", "format": "time_series"}]
+      }
+    ]
+  }
+}
