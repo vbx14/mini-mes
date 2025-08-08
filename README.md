@@ -1,4 +1,4 @@
-# mini-MES: Flask-based Simulation of Apriso Modules (Production, Quality, Warehouse)
+# mini-MES: Flask-based Simulation of DELMIA Apriso Modules (Production, Quality, Warehouse)
 
 - A minimal Manufacturing Execution System (MES) simulation in Flask, designed to emulate Apriso modules for Production, Quality Inspection, and Warehouse Inventory, with monitoring using Prometheus and Grafana. 
 - Built for simulating basic MES functionality with production-grade monitoring hooks. Ideal for backend prototyping and IoT integrations. 
@@ -138,5 +138,30 @@ inventory_updates_total
 ```
 
 ## Screenshots
+
+### HTML UI for MES Routes Testing
+![HTML UI for API Test](https://github.com/vbx14/mini-mes/blob/b500d2ed0b5606ff879062ac8ab976059d35546d/screenshots/HTML%20UI%20for%20API%20Test.png)
+
+### /POST Routes
+![MES Routes OK Tested](https://github.com/vbx14/mini-mes/blob/b500d2ed0b5606ff879062ac8ab976059d35546d/screenshots/MES%20Routes%20OK%20Tested.png)
+
+![MES Routes OK Tested 2](https://github.com/vbx14/mini-mes/blob/b500d2ed0b5606ff879062ac8ab976059d35546d/screenshots/MES%20Routes%20OK%20Tested%202.png)
+
+### /GET Routes
+![GET Endpoint](https://github.com/vbx14/mini-mes/blob/b500d2ed0b5606ff879062ac8ab976059d35546d/screenshots/GET%20Endpoint.png)
+
+![GET Endpoint 2](https://github.com/vbx14/mini-mes/blob/b500d2ed0b5606ff879062ac8ab976059d35546d/screenshots/GET%20Endpoint%202.png)
+
+### Prometheus Metrics
+![Prometheus Metric](https://github.com/vbx14/mini-mes/blob/b500d2ed0b5606ff879062ac8ab976059d35546d/screenshots/Prometheus%20Metric.png)
+
+![Prometheus Metric 2](https://github.com/vbx14/mini-mes/blob/b500d2ed0b5606ff879062ac8ab976059d35546d/screenshots/Prometheus%20Metric%202.png)
+
+![Prometheus Metric 3](https://github.com/vbx14/mini-mes/blob/b500d2ed0b5606ff879062ac8ab976059d35546d/screenshots/Prometheus%20Metric%203.png)
+
+![Prometheus Graph](https://github.com/vbx14/mini-mes/blob/b500d2ed0b5606ff879062ac8ab976059d35546d/screenshots/Prometheus%20Graph.png)
+
+### Grafana Visualization 
+![Grafana Metrics Visualization](https://github.com/vbx14/mini-mes/blob/b500d2ed0b5606ff879062ac8ab976059d35546d/screenshots/Grafana%20Metrics.png)
 
 
